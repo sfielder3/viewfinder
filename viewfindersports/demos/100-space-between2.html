@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="../dist/css/swiper.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <!-- Demo styles -->
+  <style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      /*text-align: center;
+      font-size: 25px;
+      */
+      background: #fff;
+
+      /* Center slide text vertically
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;*/
+    }
+    
+    h1 {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      /*font-size: 75px;*/
+    }
+    #intro {
+      margin: auto;
+      width: 75%;
+      padding: 5px;
+    }
+    
+    #marbles {
+      font-size: 55px;
+      margin: 15px;
+      /*
+      text-align: left;*/
+    }
+  
+    #slide2 {
+      background-image: url("");
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    #mp {
+      padding-left: 25px;
+      text-align: left;
+      width: 50%;
+    }
+    
+    #slide1button {
+      margin-top: 10px;
+      margin-left: 30px;
+      background-color: #b81414;
+      border: solid #8b1515;
+      color: ;
+    }
+    
+  </style>
+</head>
+<body>
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <h1> Viewfinder</h1>
+        <p id="intro">Poehrif  ofieroi  eorifhier ohergioe r  ergiergnio er ferg eior ger goeirghierg eri gerigheirog ieorg ergho
+        Poehrif  ofieroi  eorifhier ohergioe r  ergiergnio er ferg eior ger goeirghierg eri gerigheirog ieorg ergho
+        </p>
+      </div>
+      <div class="swiper-slide" id="slide2">
+        <h2 id="marbles">Marbles</h2>
+        <p id="mp">Poehrif  ofieroi  eorifhier ohergioe r  ergiergnio er ferg eior ger goeirghierg
+        eri gerigheirog ieorg ergho Poehrif  ofieroi  eorifhier ohergioe r  ergiergnio er ferg
+        eior ger goeirghierg eri gerigheirog ieorg ergho Poehrif  ofieroi  eorifhier ohergioe r  ergiergnio er ferg eior ger goeirghierg
+        eri gerigheirog ieorg ergho Poehrif  ofieroi  eorifhier ohergioe r  ergiergnio er ferg
+        eior ger goeirghierg eri gerigheirog ieorg ergho
+        <span> Check it out! </span>
+        </p>
+        <button type="button" class="btn btn-info btn-lg" id="slide1button" data-toggle="modal" data-target="#myModal" whichModal="modal-1">Watch Video</button>
+      </div>
+      <div class="swiper-slide" id="slide3">Slide 3
+      </div>
+      <div class="swiper-slide" id="slide4">Slide 4</div>
+      <div class="swiper-slide" id="slide5">Slide 5</div>
+      <div class="swiper-slide" id="slide6">Slide 6</div>
+      <div class="swiper-slide" id="slide7">Slide 7</div>
+      <div class="swiper-slide" id="slide8">Slide 8</div>
+      <div class="swiper-slide" id="slide9">Slide 9</div>
+      <div class="swiper-slide" id="slide10">Slide 10</div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  
+    <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" whichModal="modal-1">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p><iframe width="560" height="315" src="https://www.youtube.com/embed/_Z505ga9NCk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="../dist/js/swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+</html>
